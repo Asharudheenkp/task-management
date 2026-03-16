@@ -16,9 +16,12 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->unsignedBigInteger('assigned_to')->nullable();
+            $table->foreign('assigned_to')->references('id')->on('users');
             $table->enum('status', ['pending', 'completed', 'expired'])->default('pending');
             $table->dateTime('due_date')->nullable();
             $table->timestamps();
+
+            $table->index(['id', 'assigned_to']);
         });
     }
 
