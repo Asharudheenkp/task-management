@@ -64,4 +64,63 @@ Scheduled tasks are defined in:
 
 routes/console.php
 
+## Api routes
+
+## Task list
+GET http://127.0.0.1:8000/api/tasks
+
+### Parameters
+assigned_to
+
+status
+
+title
+
+## Task Create
+POST http://127.0.0.1:8000/api/tasks
+
+### Body
+title
+
+description
+
+status
+
+due_date
+
+assigned_to
+
+
+## Task Assign
+http://127.0.0.1:8000/api/tasks/3/assign
+
+### Body
+
+assigned_to
+
+## Task Mark As Complete
+http://127.0.0.1:8000/api/tasks/1/complete
+
+
+
+## User Registration
+http://127.0.0.1:8000/api/user/registration
+
+### Body
+
+name
+
+email
+
+password
+
+## User Login
+http://127.0.0.1:8000/api/user/login
+
+### Body
+
+email
+
+password
+
 
